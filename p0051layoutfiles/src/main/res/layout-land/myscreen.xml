@@ -8,13 +8,13 @@
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Вертикальная ориентация экрана">
+        android:text="Горизонтальная ориентация экрана">
     </TextView>
     <LinearLayout
         android:id="@+id/linearLayout1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="horizontal">
         <Button
             android:id="@+id/button1"
             android:layout_width="100dp"
