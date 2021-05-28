@@ -7,7 +7,7 @@ android {
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "ru.startandroid.p0061layouts"
+        applicationId "ru.startandroid.p0061layout"
         minSdkVersion 16
         targetSdkVersion 30
         versionCode 1

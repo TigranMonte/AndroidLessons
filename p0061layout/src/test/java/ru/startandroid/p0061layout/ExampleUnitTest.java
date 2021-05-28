@@ -1,4 +1,4 @@
-package ru.startandroid.p0061layouts;
+package ru.startandroid.p0061layout;
 
 import org.junit.Test;
 

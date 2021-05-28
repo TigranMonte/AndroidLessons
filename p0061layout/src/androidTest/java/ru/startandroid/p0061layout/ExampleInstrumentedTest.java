@@ -1,4 +1,4 @@
-package ru.startandroid.p0061layouts;
+package ru.startandroid.p0061layout;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("ru.startandroid.p0061layouts", appContext.getPackageName());
+        assertEquals("ru.startandroid.p0061layout", appContext.getPackageName());
     }
 }
