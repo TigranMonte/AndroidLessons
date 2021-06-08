@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends AppCompatActivity {
 
     TextView textView;
     Button button1;
@@ -24,22 +24,35 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         button2 = (Button) findViewById(R.id.button2);
         button3 = (Button) findViewById(R.id.button3);
 
-        button1.setOnClickListener(new View.OnClickListener() {
+        View.OnClickListener onClickListener = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                switch (view.getId()) {
+                    case R.id.button1:
+                        textView.setText("Нажата кнопка 1");
+                        break;
+                }
+                switch (view.getId()) {
+                    case R.id.button2:
+                        textView.setText("Нажата кнопка 2");
+                        break;
+                }
+                switch (view.getId()) {
+                    case R.id.button3:
+                        textView.setText("Нажата кнопка 3");
+                        break;
+                }
+            }
+        };
+
+        button1.setOnClickListener(onClickListener);
+        button2.setOnClickListener(onClickListener);
+        button3.setOnClickListener(onClickListener);
+        textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                textView.setText("Нажата кнопка 1");
+                button3.setText("4");
             }
         });
-
-        button2.setOnClickListener(this);
-    }
-
-    public void clickButton3(View view) {
-        textView.setText("Нажата кнопка 3");
-    }
-
-    @Override
-    public void onClick(View v) {
-        textView.setText("Нажата кнопка 2");
     }
 }
