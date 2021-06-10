@@ -13,6 +13,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         ImageView imageView = (ImageView) findViewById(R.id.imageView2);
-        imageView.setImageDrawable(getResources().getDrawable(R.drawable.ic_launcher_foreground;
+        imageView.setImageDrawable(getResources().getDrawable(R.drawable.ic_launcher_foreground));
     }
 }
