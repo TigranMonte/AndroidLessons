@@ -5,9 +5,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import static ru.startandroid.p0121ogandmess.R.drawable.logo;
 
 public class MainActivity extends Activity {
 
@@ -35,12 +41,15 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View v) {
                 // Меняем текст в TextView (tvOut)
-                try {
-                    int i = 6 / 0;
-                    tvOut.setText("Результат деления " + i);
-                } catch (Exception e) {
-                    Log.d(TAG, "HEY! don't do that!", e);
-                }
+
+                    tvOut.setText("Обработаем нажатие кнопки OK");
+                Toast toast = Toast.makeText(MainActivity.this, "Нажата кнопка OK", Toast.LENGTH_LONG);
+                toast.setGravity(Gravity.RIGHT, 0, 0);
+                //LinearLayout toastImage = (LinearLayout) toast.getView();
+                //ImageView imageView = new ImageView(MainActivity.this);
+                //imageView.setImageResource(logo);
+                //toastImage.addView(imageView, 0);
+                toast.show();
             }
         };
 
