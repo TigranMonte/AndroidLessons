@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#CDDC39"
     tools:context=".MainActivity">
 
     <TextView
@@ -17,12 +18,12 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:textColor="@color/my_custom_color"
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="280dp"
         android:text="Button"
+        android:textColor="@color/my_custom_color"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
