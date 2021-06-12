@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MenuSimple</string>
+    <string name="action_settings">menu</string>
+    <string name="action_item1">item1</string>
+    <string name="action_item2">item2</string>
+    <string name="action_item3">item3</string>
+</resources>
