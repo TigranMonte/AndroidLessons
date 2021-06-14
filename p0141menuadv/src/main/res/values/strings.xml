@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">MenuSimple</string>
+    <string name="action_settings">settings</string>
+    <string name="action_item1">item1</string>
+    <string name="action_item2">item2</string>
+    <string name="action_item3">item3</string>
+    <string name="Mail">Mail</string>
+    <string name="invisible_group">Отобразить группу меню</string>
+    <string name="invisible_item">Отобразить пункт меню</string>
+</resources>
