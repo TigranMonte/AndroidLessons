@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:id="@+id/groupSize">
+        <item
+            android:id="@+id/size_22"
+            android:title="size 22">
+        </item>
+        <item
+            android:id="@+id/size_26"
+            android:title="size 26">
+        </item>
+        <item
+            android:id="@+id/size_30"
+            android:title="size 30">
+        </item>
+    </group>
+</menu>
