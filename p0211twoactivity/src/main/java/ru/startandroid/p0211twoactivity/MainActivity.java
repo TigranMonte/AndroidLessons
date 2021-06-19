@@ -19,10 +19,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         btnActTwo = (Button) findViewById(R.id.btnActTwo);
         btnActThree = (Button) findViewById(R.id.btnActThree);
+
         btnActTwo.setOnClickListener(this);
         btnActThree.setOnClickListener(this);
     }
-
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
@@ -37,6 +37,5 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             default:
                 break;
         }
-
     }
 }
