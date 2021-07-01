@@ -52,9 +52,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 database.insert(DBHelper.TABLE_CONTACTS, null, contentValues);
                 break;
+
             case R.id.btnClear:
                 database.delete(DBHelper.TABLE_CONTACTS, null, null);
                 break;
+                
             case R.id.btnRead:
                 Cursor cursor = database.query(DBHelper.TABLE_CONTACTS, null, null, null, null, null, null);
 
