@@ -9,6 +9,8 @@ import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 
+import java.io.File;
+
 class MyDatabaseHelper extends SQLiteOpenHelper {
 
     private Context context;
@@ -96,6 +98,7 @@ class MyDatabaseHelper extends SQLiteOpenHelper {
     void deleteAllData(){
         SQLiteDatabase db = this.getWritableDatabase();
         db.execSQL("DELETE FROM " + TABLE_NAME);
+        db.deleteDatabase(new File(db.getPath()));
     }
 
 }

@@ -62,8 +62,6 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
                 activity.startActivityForResult(intent, 1);
             }
         });
-
-
     }
 
     @Override
@@ -73,21 +71,19 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
 
     class MyViewHolder extends RecyclerView.ViewHolder {
 
-        TextView book_id_txt, book_title_txt, book_author_txt, book_pages_txt;
+        TextView series_id_txt, series_title_txt, series_genre_txt, series_seasons_txt;
         LinearLayout mainLayout;
 
         MyViewHolder(@NonNull View itemView) {
             super(itemView);
-            book_id_txt = itemView.findViewById(R.id.series_id_txt);
-            book_title_txt = itemView.findViewById(R.id.series_title_txt);
-            book_author_txt = itemView.findViewById(R.id.series_genre_txt);
-            book_pages_txt = itemView.findViewById(R.id.series_seasons_txt);
+            series_id_txt = itemView.findViewById(R.id.series_id_txt);
+            series_title_txt = itemView.findViewById(R.id.series_title_txt);
+            series_genre_txt = itemView.findViewById(R.id.series_genre_txt);
+            series_seasons_txt = itemView.findViewById(R.id.series_seasons_txt);
             mainLayout = itemView.findViewById(R.id.mainLayout);
             //Animate Recyclerview
             Animation translate_anim = AnimationUtils.loadAnimation(context, R.anim.translate_anim);
             mainLayout.setAnimation(translate_anim);
         }
-
     }
-
 }

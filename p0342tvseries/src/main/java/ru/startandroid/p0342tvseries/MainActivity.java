@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
     TextView no_data;
 
     MyDatabaseHelper myDB;
-    ArrayList<String> book_id, book_title, book_author, book_pages;
+    ArrayList<String> series_id, series_title, series_genre, series_seasons;
     CustomAdapter customAdapter;
 
     @Override
@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
 
         recyclerView = findViewById(R.id.recyclerView);
         add_button = findViewById(R.id.add_button);
-        empty_imageview = findViewById(R.id.empty_imageview);
+        empty_imageview = findViewById(R.id.empty_imageView);
         no_data = findViewById(R.id.no_data);
         add_button.setOnClickListener(new View.OnClickListener() {
             @Override
