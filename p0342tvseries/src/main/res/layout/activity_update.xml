@@ -8,7 +8,7 @@
     android:padding="30dp">
 
     <EditText
-        android:id="@+id/title_input"
+        android:id="@+id/title_input2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="150dp"
@@ -20,7 +20,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/genre_input"
+        android:id="@+id/genre_input2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -29,30 +29,43 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title_input" />
+        app:layout_constraintTop_toBottomOf="@+id/title_input2" />
 
     <EditText
-        android:id="@+id/seasons_input"
+        android:id="@+id/seasons_input2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:ems="10"
-        android:hint="Number of Seasons"
-        android:inputType="textPersonName"
+        android:hint="Number of seasons"
+        android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/genre_input" />
+        app:layout_constraintTop_toBottomOf="@+id/genre_input2" />
 
     <Button
-        android:id="@+id/add_button"
+        android:id="@+id/update_button"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="120dp"
-        android:text="Add"
+        android:layout_height="70dp"
+        android:layout_marginTop="40dp"
+        android:text="Update"
+        android:textSize="20sp"
         android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Seasons_input2" />
+
+    <Button
+        android:id="@+id/delete_button"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="16dp"
+        android:text="Delete"
+        android:textAllCaps="false"
+        android:textColor="@color/red"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/seasons_input" />
+        app:layout_constraintTop_toBottomOf="@+id/update_button" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
