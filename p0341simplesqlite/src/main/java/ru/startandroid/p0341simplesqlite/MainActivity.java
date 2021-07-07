@@ -11,9 +11,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    Button btnAdd, btnRead, btnClear;
-    EditText etName, etEmail;
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+
+    Button btnAdd, btnRead, btnClear, btnUpd, btnDel;
+    EditText etName, etEmail, etId;
 
     DBHelper dbHelper;
 
@@ -28,24 +29,36 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnRead = (Button) findViewById(R.id.btnRead);
         btnRead.setOnClickListener(this);
 
+        btnUpd = (Button) findViewById(R.id.btnUpd);
+        btnUpd.setOnClickListener(this);
+
+        btnDel = (Button) findViewById(R.id.btnDel);
+        btnDel.setOnClickListener(this);
+
         btnClear = (Button) findViewById(R.id.btnClear);
         btnClear.setOnClickListener(this);
 
         etName = (EditText) findViewById(R.id.etName);
         etEmail = (EditText) findViewById(R.id.etEmail);
+        etId = (EditText) findViewById(R.id.etId);
 
         dbHelper = new DBHelper(this);
     }
 
     @Override
     public void onClick(View v) {
+
         String name = etName.getText().toString();
         String email = etEmail.getText().toString();
+        String id = etId.getText().toString();
 
         SQLiteDatabase database = dbHelper.getWritableDatabase();
+
         ContentValues contentValues = new ContentValues();
 
+
         switch (v.getId()) {
+
             case R.id.btnAdd:
                 contentValues.put(DBHelper.KEY_NAME, name);
                 contentValues.put(DBHelper.KEY_MAIL, email);
@@ -53,10 +66,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 database.insert(DBHelper.TABLE_CONTACTS, null, contentValues);
                 break;
 
-            case R.id.btnClear:
-                database.delete(DBHelper.TABLE_CONTACTS, null, null);
-                break;
-                
             case R.id.btnRead:
                 Cursor cursor = database.query(DBHelper.TABLE_CONTACTS, null, null, null, null, null, null);
 
@@ -74,8 +83,31 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 cursor.close();
                 break;
+
+            case R.id.btnClear:
+                database.delete(DBHelper.TABLE_CONTACTS, null, null);
+                break;
+
+            case R.id.btnUpd:
+                if (id.equalsIgnoreCase("")){
+                    break;
+                }
+                contentValues.put(DBHelper.KEY_MAIL, email);
+                contentValues.put(DBHelper.KEY_NAME, name);
+                int updCount = database.update(DBHelper.TABLE_CONTACTS, contentValues, DBHelper.KEY_ID + "= ?", new String[] {id});
+
+                Log.d("mLog", "updates rows count = " + updCount);
+                break;
+
+            case R.id.btnDel:
+                if (id.equalsIgnoreCase("")){
+                    break;
+                }
+                int delCount = database.delete(DBHelper.TABLE_CONTACTS, DBHelper.KEY_ID + "=" + id, null);
+
+                Log.d("mLog", "deleted rows count = " + delCount);
+
         }
         dbHelper.close();
     }
-
 }
