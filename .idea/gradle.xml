@@ -43,6 +43,7 @@
             <option value="$PROJECT_DIR$/p0331sharedpreferences" />
             <option value="$PROJECT_DIR$/p0341simplesqlite" />
             <option value="$PROJECT_DIR$/p0342tvseries" />
+            <option value="$PROJECT_DIR$/p0361sqlitequery" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
