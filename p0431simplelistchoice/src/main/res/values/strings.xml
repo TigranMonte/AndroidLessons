@@ -1,0 +1,21 @@
+<resources>
+    <string name="hello">Hello World, MainActivity!</string>
+    <string name="app_name">SimpleListChoice</string>
+    <string-array name="names">
+        <item>Arthur</item>
+        <item>John</item>
+        <item>Dutch</item>
+        <item>Hosea</item>
+        <item>Dutch</item>
+        <item>Mika</item>
+        <item>Lenny</item>
+        <item>Sean</item>
+        <item>Charles</item>
+        <item>Bill</item>
+        <item>Kiran</item>
+        <item>Mary</item>
+        <item>Ebigel</item>
+        <item>Diana</item>
+        <item>Tomas</item>
+    </string-array>
+</resources>
