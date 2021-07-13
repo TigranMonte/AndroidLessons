@@ -40,8 +40,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         // получаем массив из файла ресурсов
         names = getResources().getStringArray(R.array.names);
-    }
 
+    }
     @Override
     public void onClick(View v) {
         // пишем в лог выделенный элемент
@@ -52,4 +52,5 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Log.d(LOG_TAG, names[key]);
         }
     }
+
 }
