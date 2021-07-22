@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
     private static final int CM_DELETE_ID = 1;
 
-    // имена аттрибутов для MAP
+    // имена атрибутов для MAP
     final String ATTRIBUTE_NAME_TEXT = "text";
     final String ATTRIBUTE_NAME_IMAGE = "image";
 
