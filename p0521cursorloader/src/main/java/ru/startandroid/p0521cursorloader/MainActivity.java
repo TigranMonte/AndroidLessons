@@ -30,26 +30,20 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         // открываем подключение к БД
         db = new DB(this);
         db.open();
-
         // формируем столбцы сопоставления
         String[] from = new String[] {DB.COLUMN_IMG, DB.COLUMN_TXT };
         int[] to = new int[] {R.id.ivImg, R.id.lvData};
-
         // создаем адаптер и настраиваем список
         scAdapter = new SimpleCursorAdapter(this, R.layout.item, null, from, to, 0);
         lvData = findViewById(R.id.lvData);
         lvData.setAdapter(scAdapter);
-
         // добавляем контекстное меню к списку
         registerForContextMenu(lvData);
-
         // создаем лоадер для чтения данных
         LoaderManager.getInstance(this).initLoader(0,null, this);
-
     }
     // обработка нажатия кнопки
     public void onButtonClick(View view) {
@@ -58,14 +52,12 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         // получаем новый курсор с данными
         LoaderManager.getInstance(this).getLoader(0).forceLoad();
     }
-
     // создаем контектсное меню
     @Override
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
         super.onCreateContextMenu(menu, v, menuInfo);
         menu.add(0,CM_DELETE_ID, 0, R.string.delete_record);
     }
-
     @Override
     public boolean onContextItemSelected(MenuItem item) {
         if (item.getItemId() == CM_DELETE_ID) {
@@ -79,27 +71,22 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         }
         return super.onContextItemSelected(item);
     }
-
     @Override
     protected void onDestroy() {
         super.onDestroy();
         // закрываем подключение при выходе
         db.close();
     }
-
     @Override
     public Loader<Cursor> onCreateLoader(int id, Bundle bndl) {
         return new MyCursorLoader(this, db);
     }
-
     @Override
     public void onLoadFinished(Loader<Cursor> loader, Cursor cursor) {
         scAdapter.swapCursor(cursor);
     }
-
     @Override
     public void onLoaderReset(Loader<Cursor> loader) {
-
     }
     static class MyCursorLoader extends CursorLoader {
         DB db;

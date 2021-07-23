@@ -29,7 +29,6 @@ public class DB {
     public DB(Context ctx) {
         mCtx = ctx;
     }
-
     // открыть подключение
     public void open() {
         mDBHelper = new DBHelper (mCtx, DB_NAME, null, DB_VERSION);
@@ -45,7 +44,6 @@ public class DB {
         return mDB.query(DB_TABLE, null, null, null,
                 null, null, null);
     }
-
     // добавить запись в DB_TABLE
     public void addRec (String txt, int img) {
         ContentValues cv = new ContentValues();
@@ -53,12 +51,10 @@ public class DB {
         cv.put(COLUMN_IMG, img);
         mDB.insert(DB_TABLE, null, cv);
     }
-
     // удалить запись из DB_TABLE
     public void delRec (long id) {
         mDB.delete(DB_TABLE, COLUMN_ID + " = " + id, null);
     }
-
     // класс по созданию и управлению БД
     private class DBHelper extends SQLiteOpenHelper {
 
@@ -66,7 +62,6 @@ public class DB {
                         int version) {
             super(context, name, factory, version);
         }
-
         @Override
         public void onCreate(SQLiteDatabase db) {
             db.execSQL(DB_CREATE);
@@ -78,7 +73,6 @@ public class DB {
                 db.insert(DB_TABLE, null, cv);
             }
         }
-
         @Override
         public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 
