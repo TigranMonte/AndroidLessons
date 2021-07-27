@@ -22,7 +22,6 @@ public class MainActivity extends AppCompatActivity {
         // создаем адаптер
         fillData();
         boxAdapter = new BoxAdapter(this, products);
-
         // настраиваем список
         ListView lvMain = (ListView) findViewById(R.id.lvMain);
         lvMain.setAdapter(boxAdapter);
@@ -42,4 +41,5 @@ public class MainActivity extends AppCompatActivity {
         }
         Toast.makeText(this, result, Toast.LENGTH_LONG).show();
     }
+
 }

@@ -12,4 +12,5 @@ public class Product {
         this.image = _image;
         this.box = _box;
     }
+
 }

@@ -24,21 +24,25 @@ public class BoxAdapter extends BaseAdapter {
         objects = products;
         lInflater = (LayoutInflater) ctx.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
+
     // кол-во элементов
     @Override
     public int getCount() {
         return objects.size();
     }
+
     // элемент по позиции
     @Override
     public Object getItem(int position) {
         return objects.get(position);
     }
+
     // id по позиции
     @Override
     public long getItemId(int position) {
         return position;
     }
+
     // пункт списка
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
@@ -75,7 +79,6 @@ public class BoxAdapter extends BaseAdapter {
         }
         return box;
     }
-
     // обработчик для чекбоксов
     CompoundButton.OnCheckedChangeListener myCheckChangeList = new CompoundButton.OnCheckedChangeListener() {
         public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -84,4 +87,5 @@ public class BoxAdapter extends BaseAdapter {
         }
     };
 }
+
 
