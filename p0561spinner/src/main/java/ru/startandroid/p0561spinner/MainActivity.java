@@ -28,8 +28,10 @@ public class MainActivity extends AppCompatActivity {
 
         // заголовок
         spinner.setPrompt("Clubs");
+
         // выделяем элемент
         spinner.setSelection(0);
+
         // устанавливаем обработчик нажатия
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
