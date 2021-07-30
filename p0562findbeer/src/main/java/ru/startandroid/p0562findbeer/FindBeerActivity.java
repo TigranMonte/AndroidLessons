@@ -25,9 +25,9 @@ public class FindBeerActivity extends AppCompatActivity {
         String beerType = String.valueOf(color.getSelectedItem());
 
         // получить рекомендации от класса BeerExpert
-        List<String> brandList = expert.getBrands(beerType); // получить контейнер Лист с сортами пива
+        List<String> brandsList = expert.getBrands(beerType); // получить контейнер Лист с сортами пива
         StringBuilder brandsFormatted = new StringBuilder(); // построить Стринг по данным Лист
-        for (String brand : brandList) {
+        for (String brand : brandsList) {
             brandsFormatted.append(brand).append('\n');
         }
         // вывести сорта пива
