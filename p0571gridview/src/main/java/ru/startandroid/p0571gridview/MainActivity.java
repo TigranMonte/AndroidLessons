@@ -9,7 +9,6 @@ import android.widget.GridView;
 public class MainActivity extends AppCompatActivity {
 
     String[] data = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k"};
-
     GridView gvMain;
     ArrayAdapter<String> adapter;
 
@@ -22,7 +21,6 @@ public class MainActivity extends AppCompatActivity {
         gvMain.setAdapter(adapter);
         adjustGridView();
     }
-
     private void adjustGridView() {
         gvMain.setNumColumns(GridView.AUTO_FIT);
         gvMain.setColumnWidth(50);
@@ -33,4 +31,5 @@ public class MainActivity extends AppCompatActivity {
         //gvMain.setStretchMode(GridView.STRETCH_SPACING); пр-во равномерно растянуто между столбцами
         //gvMain.setStretchMode(GridView.STRETCH_SPACING_UNIFORM); пр-во и справа и слева распределено
     }
+
 }
