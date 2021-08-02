@@ -65,6 +65,8 @@
             <option value="$PROJECT_DIR$/p0561spinner" />
             <option value="$PROJECT_DIR$/p0562findbeer" />
             <option value="$PROJECT_DIR$/p0571gridview" />
+            <option value="$PROJECT_DIR$/p0581timepickerdialog" />
+            <option value="$PROJECT_DIR$/p0591datepickerdialog" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
