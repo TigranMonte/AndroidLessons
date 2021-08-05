@@ -23,6 +23,11 @@ public class MainActivity extends AppCompatActivity {
         // вызываем диалог
         showDialog(DIALOG_EXIT);
     }
+    //метод чтобы диалог вызывался по нажатии на кнопку НАЗАД
+    @Override
+    public void onBackPressed() {
+        showDialog(DIALOG_EXIT);
+    }
 
     protected Dialog onCreateDialog(int id) {
         if (id == DIALOG_EXIT) {
@@ -39,6 +44,8 @@ public class MainActivity extends AppCompatActivity {
             adb.setNegativeButton(R.string.no, myClickListener);
             // кнопка нейтрального ответа
             adb.setNeutralButton(R.string.cancel, myClickListener);
+            // чтобы диалог не закрывался по нажатию НАЗАД
+            //adb.setCancelable(false);
             // создаем диалог
             return adb.create();
         }
