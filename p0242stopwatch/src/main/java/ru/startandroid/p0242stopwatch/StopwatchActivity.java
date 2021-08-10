@@ -52,16 +52,33 @@ public class StopwatchActivity extends AppCompatActivity {
         seconds = 0;
     }
 
+    //@Override
+    //protected void onStop() {
+        //super.onStop();
+        //wasRunning = running;
+        //running = false;
+    //}
+
     @Override
-    protected void onStop() {
-        super.onStop();
+    protected void onPause() {
+        super.onPause();
         wasRunning = running;
         running = false;
     }
 
+
+    //@Override
+    //protected void onStart() {
+       // super.onStart();
+        //if (wasRunning) {
+            //running = true;
+        //}
+    //}
+
+
     @Override
-    protected void onStart() {
-        super.onStart();
+    protected void onResume() {
+        super.onResume();
         if (wasRunning) {
             running = true;
         }
