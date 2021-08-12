@@ -3,6 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="p0041basicviews/src/main/res/layout/activity_main.xml" value="0.24947916666666667" />
+        <entry key="p0051layoutfiles/src/main/res/layout/activity_main.xml" value="0.24947916666666667" />
+        <entry key="p0051layoutfiles/src/main/res/layout/myscreen.xml" value="0.24947916666666667" />
+        <entry key="p0061layout/src/main/res/layout/main.xml" value="0.24947916666666667" />
+        <entry key="p0061layout/src/main/res/layout/rlayout.xml" value="0.19444444444444445" />
+        <entry key="p0061layout/src/main/res/layout/tlayout.xml" value="0.24947916666666667" />
+        <entry key="p0062framelayout/src/main/res/layout/activity_main.xml" value="0.24947916666666667" />
+        <entry key="p0072layoutprop/src/main/res/layout/layout_gravity.xml" value="0.24947916666666667" />
+        <entry key="p0072layoutprop/src/main/res/layout/layout_margin.xml" value="0.24947916666666667" />
+        <entry key="p0072layoutprop/src/main/res/layout/main.xml" value="0.24947916666666667" />
         <entry key="p0212twoactivity2/src/main/res/layout/activity_receive_main.xml" value="0.18055555555555555" />
         <entry key="p0242stopwatch/src/main/res/layout/activity_stopwatch.xml" value="0.24947916666666667" />
         <entry key="p0611alertdialogprepare/src/main/res/layout/activity_main.xml" value="0.24947916666666667" />
