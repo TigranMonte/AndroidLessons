@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">AlertDialogCustom</string>
+    <string name="add">Добавить</string>
+    <string name="remove">Удалить</string>
+    <string name="Hello">Hello World!</string>
+    <string name="settings">Settings</string>
+</resources>
