@@ -6,6 +6,7 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 
@@ -59,7 +60,32 @@ public class MainActivity extends AppCompatActivity {
         }
         return super.onCreateDialog(id);
     }
+    void method1() {
+        //dialog.dismiss();
+        //dialog.cancel();
+        //dialog.hide();
+        //dismissDialog(DIALOG);
+        removeDialog(DIALOG);
+    }
+    void method2() {
+        showDialog(DIALOG);
+    }
+
     public void onClick(View v) {
         showDialog(DIALOG);
+
+        Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                method1();
+            }
+        },2000);
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                method2();
+            }
+        }, 4000);
     }
 }
