@@ -30,7 +30,6 @@ public class MyObject implements Parcelable {
             Log.d(LOG_TAG, "createFromParcel");
             return new MyObject(in);
         }
-
         @Override
         public MyObject[] newArray(int size) {
             return new MyObject[size];
