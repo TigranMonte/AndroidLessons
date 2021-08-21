@@ -19,11 +19,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Log.d(LOG_TAG, "onCreate");
     }
+
     @Override
     protected void onDestroy() {
         super.onDestroy();
         Log.d(LOG_TAG, "onDestroy");
     }
+
     @Override
     protected void onPause() {
         super.onPause();
@@ -67,6 +69,7 @@ public class MainActivity extends AppCompatActivity {
         super.onStop();
         Log.d(LOG_TAG, "onStop");
     }
+
     public void onclick(View v) {
         Toast.makeText(this, "Count = " + ++cnt, Toast.LENGTH_SHORT).show();
     }
