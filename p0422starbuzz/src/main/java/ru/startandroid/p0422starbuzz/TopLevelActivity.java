@@ -27,6 +27,9 @@ public class TopLevelActivity extends AppCompatActivity {
                 } else if (position == 1) {
                     Intent intent = new Intent(TopLevelActivity.this, FoodCategoryActivity.class);
                     startActivity(intent);
+                } else {
+                    Intent intent = new Intent(TopLevelActivity.this, RestaurantCategoryActivity.class);
+                    startActivity(intent);
                 }
             }
         };
