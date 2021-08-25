@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidLessons">
         <activity
+            android:name=".FoodCategoryActivity"
+            android:exported="true" />
+        <activity
+            android:name=".FoodActivity"
+            android:exported="true" />
+        <activity
             android:name=".DrinkActivity"
             android:exported="true" />
         <activity
