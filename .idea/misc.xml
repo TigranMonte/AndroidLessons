@@ -35,6 +35,9 @@
         <entry key="p0701saveinstancestate/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="p0711preferencessimple/src/main/res/layout/activity_main.xml" value="0.24947916666666667" />
         <entry key="p0711preferencessimple/src/main/res/xml/pref.xml" value="0.24947916666666667" />
+        <entry key="p0721preferencessimple2/src/main/res/layout/activity_main.xml" value="0.24947916666666667" />
+        <entry key="p0721preferencessimple2/src/main/res/layout/activity_pref.xml" value="0.24947916666666667" />
+        <entry key="p0721preferencessimple2/src/main/res/xml/pref.xml" value="0.24947916666666667" />
       </map>
     </option>
   </component>
