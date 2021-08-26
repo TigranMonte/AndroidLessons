@@ -3,13 +3,12 @@ plugins {
 }
 
 android {
-    compileSdkVersion 30
-    buildToolsVersion "30.0.3"
+    compileSdk 30
 
     defaultConfig {
-        applicationId "com.example.androidlessons"
-        minSdkVersion 16
-        targetSdkVersion 30
+        applicationId "ru.startandroid.p0423bitsandpizzas"
+        minSdk 19
+        targetSdk 30
         versionCode 1
         versionName "1.0"
 
