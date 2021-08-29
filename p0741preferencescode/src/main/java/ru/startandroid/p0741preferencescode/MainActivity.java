@@ -21,4 +21,5 @@ public class MainActivity extends AppCompatActivity {
         mi.setIntent(new Intent(this, PrefActivity.class));
         return super.onCreateOptionsMenu(menu);
     }
+
 }
