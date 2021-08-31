@@ -48,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
     }
+
     void writeFile() {
         try {
             // открываем поток для записи
@@ -64,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
     }
+
     void readFile() {
         try {
             // открываем поток для чтения
@@ -79,6 +81,7 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
     }
+
     void writeFileSD() {
         // проверяем доступность SD
         if (!Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)) {
@@ -105,6 +108,7 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
     }
+
     void readFileSD() {
         // проверяем доступность SD
         if (!Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)) {
