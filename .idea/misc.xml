@@ -54,6 +54,8 @@
         <entry key="p0771tabintent/src/main/res/layout/activity_main.xml" value="0.24947916666666667" />
         <entry key="p0771tabintent/src/main/res/layout/activity_one.xml" value="0.23541666666666666" />
         <entry key="p0771tabintent/src/main/res/layout/activity_two.xml" value="0.23541666666666666" />
+        <entry key="p0781tabcontentfactory/src/main/res/layout/activity_main.xml" value="0.23541666666666666" />
+        <entry key="p0781tabcontentfactory/src/main/res/layout/tab.xml" value="0.24947916666666667" />
       </map>
     </option>
   </component>
