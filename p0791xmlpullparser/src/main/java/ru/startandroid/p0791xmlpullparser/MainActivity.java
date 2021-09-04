@@ -66,19 +66,19 @@ public class MainActivity extends AppCompatActivity {
         }
     }
     // если xml в файле
-    //XmlPullParser prepareXpp() {
-        //return getResources().getXml(R.xml.data);
-    // }
-    // если xml получен не из файла
-    XmlPullParser prepareXpp() throws XmlPullParserException{
-        // получаем фабрику
-        XmlPullParserFactory factory = XmlPullParserFactory.newInstance();
-        // включаем поддержку namespace (по умолчанию выключена)
-        factory.setNamespaceAware(true);
-        // создаем парсер
-        XmlPullParser xpp = factory.newPullParser();
-        // даем парсеру на вход ридер
-        xpp.setInput(new StringReader("<data><phone><company>Samsung</company></phone></data>"));
-        return xpp;
+    XmlPullParser prepareXpp() {
+        return getResources().getXml(R.xml.data);
     }
+    // если xml получен не из файла
+    //XmlPullParser prepareXpp() throws XmlPullParserException{
+        // получаем фабрику
+        //XmlPullParserFactory factory = XmlPullParserFactory.newInstance();
+        // включаем поддержку namespace (по умолчанию выключена)
+        //factory.setNamespaceAware(true);
+        // создаем парсер
+        //XmlPullParser xpp = factory.newPullParser();
+        // даем парсеру на вход ридер
+        //xpp.setInput(new StringReader("<data><phone><company>Samsung</company></phone></data>"));
+        //return xpp;
+    //}
 }
