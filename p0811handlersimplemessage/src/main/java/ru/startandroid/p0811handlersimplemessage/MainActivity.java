@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
                         tvStatus.setText("Connected");
                         break;
                 }
-            };
+            }
         };
         h.sendEmptyMessage(STATUS_NONE);
     }
