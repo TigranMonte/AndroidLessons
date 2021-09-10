@@ -35,22 +35,26 @@ public class MainActivity extends AppCompatActivity {
         });
         t.start();
     }
+
     Runnable runn1 = new Runnable() {
         @Override
         public void run() {
             tvInfo.setText("runn1");
         }
     };
+
     Runnable runn2 = new Runnable() {
         @Override
         public void run() {
             tvInfo.setText("runn2");
         }
     };
+
     Runnable runn3 = new Runnable() {
         @Override
         public void run() {
             tvInfo.setText("runn3");
         }
     };
+
 }
