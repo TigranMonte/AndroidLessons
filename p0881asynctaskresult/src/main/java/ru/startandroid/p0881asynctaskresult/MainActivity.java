@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
         tvInfo = (TextView) findViewById(R.id.tvInfo);
     }
+
     public void onclick(View v) {
         switch (v.getId()) {
             case R.id.btnStart:
@@ -40,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
     }
+
     private void showResult() {
         if (mt == null) return;
         int result = -1;
