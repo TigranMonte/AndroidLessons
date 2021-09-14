@@ -79,7 +79,6 @@ public class MainActivity extends AppCompatActivity {
             super.onCancelled();
             tvInfo.setText("Cancel");
             Log.d(LOG_TAG, "Cancel");
-
         }
     }
 }
