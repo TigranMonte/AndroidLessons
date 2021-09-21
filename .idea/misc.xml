@@ -72,6 +72,7 @@
         <entry key="p0921servicesimple/src/main/res/layout/activity_main.xml" value="0.24947916666666667" />
         <entry key="p0931servicestop/src/main/res/layout/activity_main.xml" value="0.23541666666666666" />
         <entry key="p0941servicekillclient/src/main/res/layout/activity_main.xml" value="0.23541666666666666" />
+        <entry key="p0951servicebackpendingintent/src/main/res/layout/activity_main.xml" value="0.24947916666666667" />
       </map>
     </option>
   </component>
