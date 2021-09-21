@@ -1,4 +1,4 @@
-package ru.startandroid.p0942servicekillserver;
+package ru.startandroid.p0941servicekillclient;
 
 import java.util.concurrent.TimeUnit;
 

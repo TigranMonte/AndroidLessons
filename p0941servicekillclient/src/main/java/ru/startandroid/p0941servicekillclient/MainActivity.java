@@ -15,7 +15,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClickStart(View v) {
-        startService(new Intent(new Intent("ru.startandroid.p0942servicekillserver." +
-                "MyService").putExtra("name", "value")));
+
+        Intent intent = new Intent("ru.startandroid.p0941servicekillclient.MyService");
+        intent.setPackage("ru.startandroid.p0941servicekillserver");
+        intent.putExtra("name", "value");
+        startForegroundService(intent);
+
     }
 }
