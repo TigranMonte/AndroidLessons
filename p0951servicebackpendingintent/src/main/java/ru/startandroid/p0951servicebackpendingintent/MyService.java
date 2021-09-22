@@ -75,7 +75,6 @@ public class MyService extends Service {
             }
             stop();
         }
-
         void stop() {
             Log.d(LOG_TAG, "MyRun#" + startId + " end, stopSelfResult("
                     + startId + ") = " + stopSelfResult(startId));

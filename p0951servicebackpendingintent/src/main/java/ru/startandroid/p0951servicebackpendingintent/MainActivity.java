@@ -29,7 +29,6 @@ public class MainActivity extends AppCompatActivity {
     TextView tvTask2;
     TextView tvTask3;
 
-    /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -86,7 +85,6 @@ public class MainActivity extends AppCompatActivity {
                     break;
             }
         }
-
         // Ловим сообщения об окончании задач
         if (resultCode == STATUS_FINISH) {
             int result = data.getIntExtra(PARAM_RESULT, 0);
