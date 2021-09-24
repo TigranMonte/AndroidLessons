@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">ServiceBindingLocal</string>
+    <string name="Start">Start</string>
+    <string name="Up">Up</string>
+    <string name="Down">Down</string>
+</resources>

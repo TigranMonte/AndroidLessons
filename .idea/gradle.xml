@@ -109,6 +109,7 @@
             <option value="$PROJECT_DIR$/p0941servicekillclient" />
             <option value="$PROJECT_DIR$/p0951servicebackpendingintent" />
             <option value="$PROJECT_DIR$/p0961servicebackbroadcast" />
+            <option value="$PROJECT_DIR$/p0981servicebindinglocal" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
