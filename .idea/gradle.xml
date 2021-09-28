@@ -111,6 +111,7 @@
             <option value="$PROJECT_DIR$/p0961servicebackbroadcast" />
             <option value="$PROJECT_DIR$/p0981servicebindinglocal" />
             <option value="$PROJECT_DIR$/p0991notificationssimple" />
+            <option value="$PROJECT_DIR$/p0992notificationsimple2" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
