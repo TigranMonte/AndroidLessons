@@ -58,7 +58,8 @@ public class MainActivity extends AppCompatActivity {
                 Uri uri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
                 // Initialize notification builder
                 NotificationCompat.Builder builder = new NotificationCompat.Builder(
-                        MainActivity.this, getString(R.string.app_name));
+                        MainActivity.this, CHANNEL_ID); // в неработающей версии стояло это getString(R.string.app_name)
+
 
                 // set notification title
                 builder.setContentTitle("Request");
@@ -89,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             NotificationChannel notificationChannel = new NotificationChannel(
-                    CHANNEL_ID, CHANNEL_ID, NotificationManager.IMPORTANCE_DEFAULT);
+                    CHANNEL_ID, "CHANNEL_ID", NotificationManager.IMPORTANCE_HIGH);
             manager.createNotificationChannel(notificationChannel);
         }
     }
