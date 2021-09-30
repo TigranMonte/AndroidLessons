@@ -113,6 +113,7 @@
             <option value="$PROJECT_DIR$/p0991notificationssimple" />
             <option value="$PROJECT_DIR$/p0992notificationsimple2" />
             <option value="$PROJECT_DIR$/p1001intentservice" />
+            <option value="$PROJECT_DIR$/p1002foregroundservice" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

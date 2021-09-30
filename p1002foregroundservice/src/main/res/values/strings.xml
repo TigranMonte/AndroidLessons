@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ForegroundService</string>
+    <string name="Start">Start Service</string>
+    <string name="Stop">Stop Service</string>
+</resources>
