@@ -9,11 +9,12 @@ import android.database.sqlite.SQLiteOpenHelper;
 class StarbuzzDatabaseHelper extends SQLiteOpenHelper {
 
     private static final String DB_NAME = "starbuzz"; // имя базы данных
-    private static final int DB_VERSION = 12;
+    private static final int DB_VERSION = 2;
 
     StarbuzzDatabaseHelper (Context context) {
         super(context, DB_NAME,null, DB_VERSION);
     }
+
     @Override
     public void onCreate(SQLiteDatabase db) {
         updateMyDatabase(db, 0, DB_VERSION);
@@ -39,6 +40,7 @@ class StarbuzzDatabaseHelper extends SQLiteOpenHelper {
         foodValues.put("NAME", name);
         foodValues.put("DESCRIPTION", description);
         foodValues.put("RESOURCE_ID", resourceId);
+        db.insert("FOOD", null, foodValues);
     }
 
     private static void insertRestaurant(SQLiteDatabase db, String name, String description,
@@ -47,6 +49,7 @@ class StarbuzzDatabaseHelper extends SQLiteOpenHelper {
         restaurantValues.put("NAME", name);
         restaurantValues.put("DESCRIPTION", description);
         restaurantValues.put("RESOURCE_ID", resourceId);
+        db.insert("RESTAURANTS", null, restaurantValues);
     }
 
     private void updateMyDatabase(SQLiteDatabase db, int oldVersion, int newVersion) {
@@ -66,7 +69,7 @@ class StarbuzzDatabaseHelper extends SQLiteOpenHelper {
                     + "IMAGE_RESOURCE_ID INTEGER);");
             insertFood(db, "Pizza", "Pizza with meat, mushrooms and cheese", R.drawable.pizza);
             insertFood(db, "Burger", "Our MegaBurger with cheese and meat", R.drawable.burger);
-            insertFood(db, "Barberque", "Highest quality meat, armenian traditional xorovats",
+            insertFood(db, "Barbecue", "Highest quality meat, armenian traditional xorovats",
                     R.drawable.barbeque);
 
             db.execSQL("CREATE TABLE RESTAURANTS (_id INTEGER PRIMARY KEY AUTOINCREMENT, "
@@ -81,7 +84,9 @@ class StarbuzzDatabaseHelper extends SQLiteOpenHelper {
                     "Just 3 min from the City Stadium", R.drawable.bar1);
         }
         if (oldVersion < 2 ) {
-
+            db.execSQL("ALTER TABLE DRINK ADD COLUMN FAVORITE NUMERIC;");
+            db.execSQL("ALTER TABLE FOOD ADD COLUMN FAVORITE NUMERIC;");
+            db.execSQL("ALTER TABLE RESTAURANTS ADD COLUMN FAVORITE NUMERIC;");
         }
     }
 }
