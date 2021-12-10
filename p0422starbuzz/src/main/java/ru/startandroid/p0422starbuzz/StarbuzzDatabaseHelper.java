@@ -22,9 +22,6 @@ class StarbuzzDatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL("DROP TABLE IF EXISTS DRINK");
-        db.execSQL("DROP TABLE IF EXISTS FOOD");
-        db.execSQL("DROP TABLE IF EXISTS RESTAURANTS");
         updateMyDatabase(db, oldVersion, newVersion);
     }
 
